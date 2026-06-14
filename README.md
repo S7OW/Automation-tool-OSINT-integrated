@@ -27,7 +27,6 @@ Follow the menu to run the Email Automation Tool.
 
 ## Security & Privacy Notes
 - DO NOT commit API keys, SMTP passwords, or other secrets to source control.
-- Prefer environment variables or a separate config file excluded by `.gitignore`.
 - Be aware of legal and ethical constraints when collecting and contacting addresses. Only contact people you are authorized to contact.
 
 ## Responsible Use
