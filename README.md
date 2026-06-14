@@ -1,5 +1,12 @@
 # Odix — Hunter.io Email Discovery & Outreach Tool
 
+   ██████╗ ██████╗ ██╗██╗  ██╗
+  ██╔═══██╗██╔══██╗██║╚██╗██╔╝
+  ██║   ██║██║  ██║██║ ╚███╔╝
+  ██║   ██║██║  ██║██║ ██╔██╗
+  ╚██████╔╝██████╔╝██║██╔╝ ██╗
+   ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═╝
+
 Small Python utility to discover email addresses for a target domain (via Hunter.io) and send personalized outreach emails.
 
 ## Features
