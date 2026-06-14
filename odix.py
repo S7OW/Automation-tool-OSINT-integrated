@@ -14,19 +14,21 @@ def show_odix_panel():
     """)
     print("=" * 60)
     print("1. Email Automation Tool")
+    print("2. Brute Force")
+    print("3. UserTrace")
+    print("4. Dos attack")
     print("0. Exit")
     choice = input("Select a tool: ")
-
+    if choice == "2" or choice == "3" or choice == "4":
+        print("This Tool is not ready yet, please wait for the next update.")
     if choice == "1":
         email_automation()
-
 import requests
 import smtplib
 import time
 import json
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
 # ======================== CONFIGURATION SECTION ========================
 # 🔧 REPLACE THESE VALUES WITH YOUR OWN INFORMATION
 
@@ -245,8 +247,6 @@ def email_automation():
     print("[SUCCESS] Process Complete!")
     print(f"[INFO] Summary: {successful_sends} of {len(decision_makers)} emails sent successfully.")
     print("=" * 60)
-
-
 
 if __name__ == "__main__":
     show_odix_panel()
