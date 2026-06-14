@@ -1,4 +1,7 @@
 # Odix — Hunter.io Email Discovery & Outreach Tool
+---
+By Amine Azr
+---
 
 ```
    ██████╗ ██████╗ ██╗██╗  ██╗
