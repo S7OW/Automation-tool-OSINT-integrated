@@ -8,13 +8,8 @@ Small Python utility to discover email addresses for a target domain (via Hunter
 - Send personalized email outreach via SMTP
 
 ## Quick Start
-1. Install dependencies:
 
-```bash
-pip install -r requirements.txt
-```
-
-2. Configure credentials:
+1. Configure credentials:
 
 - `HUNTER_API_KEY` — your Hunter.io API key
 - `SMTP_USER` — SMTP username (email)
