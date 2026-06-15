@@ -1,0 +1,116 @@
+[
+  {
+    "platform": "Reddit",
+    "status": "FOUND",
+    "url": "https://www.reddit.com/user/testuser/",
+    "response_time": 0.9273016000224743
+  },
+  {
+    "platform": "GitHub",
+    "status": "NOT FOUND",
+    "url": "https://github.com/testuser",
+    "response_time": 1.0284103000012692
+  },
+  {
+    "platform": "Instagram",
+    "status": "FOUND",
+    "url": "https://www.instagram.com/testuser/",
+    "response_time": 1.1886372000153642
+  },
+  {
+    "platform": "TikTok",
+    "status": "ERROR",
+    "url": "https://www.tiktok.com/@testuser",
+    "response_time": 1.3135343999892939
+  },
+  {
+    "platform": "Pinterest",
+    "status": "FOUND",
+    "url": "https://www.pinterest.com/testuser/",
+    "response_time": 1.714406000013696
+  },
+  {
+    "platform": "Twitter",
+    "status": "FOUND",
+    "url": "https://twitter.com/testuser",
+    "response_time": 2.0571641999995336
+  },
+  {
+    "platform": "Steam",
+    "status": "FOUND",
+    "url": "https://steamcommunity.com/id/testuser",
+    "response_time": 1.132853499992052
+  },
+  {
+    "platform": "Facebook",
+    "status": "FOUND",
+    "url": "https://www.facebook.com/testuser",
+    "response_time": 2.0574607999878936
+  },
+  {
+    "platform": "Twitch",
+    "status": "FOUND",
+    "url": "https://www.twitch.tv/testuser",
+    "response_time": 1.2574377999990247
+  },
+  {
+    "platform": "YouTube",
+    "status": "FOUND",
+    "url": "https://www.youtube.com/@testuser",
+    "response_time": 1.196346300013829
+  },
+  {
+    "platform": "LinkedIn",
+    "status": "ERROR",
+    "url": "https://www.linkedin.com/in/testuser/",
+    "response_time": 0.9562816999969073
+  },
+  {
+    "platform": "Medium",
+    "status": "ERROR",
+    "url": "https://medium.com/@testuser",
+    "response_time": 1.018481300008716
+  },
+  {
+    "platform": "Telegram",
+    "status": "FOUND",
+    "url": "https://t.me/testuser",
+    "response_time": 0.8326651999959722
+  },
+  {
+    "platform": "GitLab",
+    "status": "FOUND",
+    "url": "https://gitlab.com/testuser",
+    "response_time": 1.0861522000050172
+  },
+  {
+    "platform": "Behance",
+    "status": "ERROR",
+    "url": "https://www.behance.net/testuser",
+    "response_time": 0.8206510999880265
+  },
+  {
+    "platform": "SoundCloud",
+    "status": "FOUND",
+    "url": "https://soundcloud.com/testuser",
+    "response_time": 0.897800599981565
+  },
+  {
+    "platform": "DeviantArt",
+    "status": "ERROR",
+    "url": "https://www.deviantart.com/testuser",
+    "response_time": 1.5239161000063177
+  },
+  {
+    "platform": "Vimeo",
+    "status": "FOUND",
+    "url": "https://vimeo.com/testuser",
+    "response_time": 1.1502063000225462
+  },
+  {
+    "platform": "Hacker News",
+    "status": "ERROR",
+    "url": "https://news.ycombinator.com/user?id=testuser",
+    "response_time": 1.6403483000176493
+  }
+]

@@ -1,5 +1,78 @@
 
 import os
+import shlex
+import subprocess
+import sys
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent
+USERTRACE_DIR = BASE_DIR / "Usertrace"
+USERTRACE_SCRIPT = USERTRACE_DIR / "usertrace.py"
+USERTRACE_COMMANDS = ("username", "email", "domain", "link", "metadata", "web")
+
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
+
+
+def run_usertrace_tool():
+    """Launch the bundled UserTrace CLI from the ODIX menu."""
+    if not USERTRACE_SCRIPT.exists():
+        print(f"[ERROR] UserTrace was not found at: {USERTRACE_SCRIPT}")
+        input("Press Enter to return to the ODIX menu...")
+        return
+
+    print("=" * 60)
+    print("UserTrace")
+    print("=" * 60)
+    print("Available traces:")
+    for index, command in enumerate(USERTRACE_COMMANDS, 1):
+        print(f"{index}. {command}")
+    print("0. Back")
+
+    trace_choice = input("Select a trace type: ").strip().lower()
+    if trace_choice == "0":
+        return
+
+    if trace_choice.isdigit() and 1 <= int(trace_choice) <= len(USERTRACE_COMMANDS):
+        command = USERTRACE_COMMANDS[int(trace_choice) - 1]
+    elif trace_choice in USERTRACE_COMMANDS:
+        command = trace_choice
+    else:
+        print("[ERROR] Invalid UserTrace option.")
+        input("Press Enter to return to the ODIX menu...")
+        return
+
+    target = input(f"Enter {command} target: ").strip()
+    if not target:
+        print("[ERROR] Target is required.")
+        input("Press Enter to return to the ODIX menu...")
+        return
+
+    extra_args = input(
+        "Optional flags, e.g. --export json --open --threads 50 (press Enter to skip): "
+    ).strip()
+
+    cmd = [sys.executable, str(USERTRACE_SCRIPT), command, target]
+    if extra_args:
+        try:
+            cmd.extend(shlex.split(extra_args, posix=(os.name != "nt")))
+        except ValueError as exc:
+            print(f"[ERROR] Could not parse optional flags: {exc}")
+            input("Press Enter to return to the ODIX menu...")
+            return
+
+    print("\n[START] Launching UserTrace...\n")
+    try:
+        subprocess.run(cmd, cwd=USERTRACE_DIR, check=False)
+    except OSError as exc:
+        print(f"[ERROR] Failed to launch UserTrace: {exc}")
+
+    input("\nPress Enter to return to the ODIX menu...")
 
 def show_odix_panel():
     os.system("cls" if os.name == "nt" else "clear")
@@ -19,7 +92,10 @@ def show_odix_panel():
     print("4. Dos attack")
     print("0. Exit")
     choice = input("Select a tool: ")
-    if choice == "2" or choice == "3" or choice == "4":
+    if choice == "3":
+        run_usertrace_tool()
+        
+    if choice == "2" or choice == "4":
         print("This Tool is not ready yet, please wait for the next update.")
     if choice == "1":
         email_automation()
@@ -61,7 +137,6 @@ I hope this message finds you well.
 Best regards,
 [Your name]
 """
-
 # ======================== HUNTER.IO API FUNCTIONS ========================
 
 def search_domain_emails(domain, limit=10): #if you have a paid plan you can increase the limit
