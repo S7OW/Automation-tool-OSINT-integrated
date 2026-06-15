@@ -274,15 +274,6 @@ pip install -r Usertrace/requirements.txt
 
 Some features depend on optional packages such as `dnspython`, `python-whois`, `Pillow`, and `exifread`.
 
-## Roadmap Ideas
-
-- Move secrets out of `odix.py` and into environment variables or a local ignored config file.
-- Add a safer dry-run mode for the email tool.
-- Add confirmation before sending outreach emails.
-- Add a main requirements file for the whole project.
-- Add tests for menu routing and UserTrace integration.
-- Replace placeholder menu options with clearly scoped, legal, defensive tools.
-
 ## License
 
 This project is released under the MIT License. See `LICENSE` for details.
