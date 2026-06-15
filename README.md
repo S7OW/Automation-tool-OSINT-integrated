@@ -1,6 +1,8 @@
 # ODIX - Automation and Integrated OSINT Toolkit
 
-```By Amine Azr```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+By Amine Azr
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ODIX is a Python command-line menu that groups automation and OSINT utilities in one place. The current build includes an email discovery/outreach workflow powered by Hunter.io and an integrated UserTrace OSINT framework for username, email, domain, link, metadata, and web reconnaissance.
 
