@@ -160,6 +160,9 @@ python odix.py
 
 Choose option `3`, then choose a trace type.
 
+![Alt Text](images/utss.png)
+
+
 Examples:
 
 ```text
